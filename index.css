@@ -81,3 +81,51 @@ button:focus {
     cursor: pointer;  
 }
 
+/* Custom styles */
+.msg-error {
+    display: none;
+    color: red;
+    font-size: .8rem;
+    text-align: center;
+    padding: 0;
+    margin-top: .3rem;
+}
+.msg-error.msg-error-active {
+    display: block;
+}
+
+/* #balloon-checkbox */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease;
+}
+
+input[type="checkbox"]::after {
+    content: '🎈';
+    display: none;
+}
+
+input[type="checkbox"]:hover {
+    background-color: #ddd;
+}
+
+input[type="checkbox"]:checked {
+    border: .1rem solid #F04C86;
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+}

@@ -4,7 +4,15 @@
         <title>Valentine's Challenge Week 💘</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap" rel="stylesheet">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap"
+        rel="stylesheet">
+        
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
@@ -12,12 +20,14 @@
         <p class="result" id="result">Total gift cost: <span id="cost-el">...</span></p>
         <form>
             <label for="food-select">Select food:</label>
+            
             <select id="food-select">
                 <option value="">--Please select an option--</option>
                 <option value="5">🍓 strawberries - $5</option>
                 <option value="10">🍫 chocolate - $10</option>
                 <option value="20">🧁 cupcakes - $20</option>
             </select>
+            <div class="msg-error">☝🏾Please select an option from the list above.</div>
             <br>
             <label for="transport-select">Select transport:</label>
             <select id="transport-select">
@@ -26,9 +36,10 @@
                 <option value="50">🚘 limo - $50</option>
                 <option value="500">🚁 helicopter - $500</option>
             </select>
+            <div class="msg-error">☝🏾Please select an option from the list above.</div>
             <br>
-            <div>
-                <label for="balloon-checkbox">Add balloons? 🎈</label>            
+            <div class="checkbox-wrapper">
+                <label for="balloon-checkbox">Add balloons? </label>            
                 <input type="checkbox" id="balloon-checkbox" name="balloon-checkbox" checked>
             </div>
             
