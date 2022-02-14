@@ -7,6 +7,7 @@ function calculate() {
   // 2. Display the total cost in the cost-el span.
   const foodEl = document.getElementById("food-select");
   const transportEl = document.getElementById("transport-select");
+  const balloonEle = document.getElementById("balloon-checkbox");
   let cost = 0;
 
   if (foodEl.value === "") {
@@ -15,7 +16,11 @@ function calculate() {
     errorToggle(transportEl);
   } else {
     cost = parseInt(foodEl.value) + parseInt(transportEl.value);
-    costEl.textContent = "$" + cost;
+    if (balloonEle.checked) {
+      costEl.textContent = "🎈" + "$" + cost + "🎈";
+    } else {
+      costEl.textContent = "$" + cost;
+    }
     clearErrorMsg();
   }
 }
@@ -31,11 +36,11 @@ const errorToggle = (element) => {
     element.style.outlineColor = "red";
     clearErrorMsg();
     errorMsgs[1].classList.add("msg-error-active");
-  } 
+  }
 };
 
 const clearErrorMsg = () => {
   errorMsgs.forEach((errorMsg) => {
     errorMsg.classList.remove("msg-error-active");
   });
-}
+};
