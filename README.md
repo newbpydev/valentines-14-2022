@@ -1,4 +1,4 @@
-# Frontend Mentor - Profile card component solution
+# Valentine's Challenge - Gift Selector Challenge Solution
 
 This is a solution to the [Valentine's Challenge](https://scrimba.com/learn/codeweeks/-gift-selector-challenge-cof354519882e285411fb8562). 
 
